@@ -1,0 +1,17 @@
+<div style="width: 100%; background: pink; text-align: center; padding-top: 5px; padding-bottom: 5px;">
+  刪除占用指定port的process
+</div>
+<div class="row">
+  <div class="col col-3" style="text-align: right;">
+    <label style="text-align: right;">port:</label>
+  </div>
+  <div class="col col-4" style="text-align: left;">
+    <input type="number" value="" autofocus="autofocus" style="text-align: right; width: 100%" maxlength="5" [(ngModel)]="port"/>
+  </div>
+  <div class="col col-5">
+    <button style="width: 100%;" (click)="delete()">刪除</button>
+  </div>
+  <!-- <label class="col-4">port:</label>
+  <input class="col-4" type="number" [(ngModel)]="port"> -->
+
+</div>

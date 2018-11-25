@@ -21,6 +21,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ElectronDialogService } from './providers/electron-dialog.service';
 import { NodeFsService } from './providers/node-fs.service';
 import { NodeChildProcessService } from './providers/node-child-process.service';
+import { KillPortProcessComponent } from './components/kill-port-process/kill-port-process.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -31,7 +32,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   declarations: [
     AppComponent,
     HomeComponent,
-    WebviewDirective
+    WebviewDirective,
+    KillPortProcessComponent
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,13 @@ let win, serve;
 const args = process.argv.slice(1);
 serve = args.some(val => val === '--serve');
 
+const mainWindowSetting = {
+  width: 200,
+  height: 100
+  // width: 800,
+  // height: 600
+};
+
 function createWindow() {
 
   const electronScreen = MainProcessElectronAPI.screen;
@@ -13,11 +20,20 @@ function createWindow() {
 
   // Create the browser window.
   win = new MainProcessElectronAPI.BrowserWindow({
-    x: 0,
-    y: 0,
-    width: size.width,
-    height: size.height,
-    autoHideMenuBar: true
+    // x: size.width - (mainWindowSetting.width + 100),
+    // y: 100,
+    useContentSize: true,
+    center: true,
+    width: mainWindowSetting.width,
+    // minWidth: mainWindowSetting.width,
+    // maxWidth: mainWindowSetting.width,
+    height: mainWindowSetting.height,
+    // minHeight: mainWindowSetting.height,
+    autoHideMenuBar: true,
+
+    // able
+    resizable: false,
+    // fullscreenable: false,
   });
 
   if (serve) {
