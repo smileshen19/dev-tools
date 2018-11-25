@@ -19,6 +19,8 @@ import { WebviewDirective } from './directives/webview.directive';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ElectronDialogService } from './providers/electron-dialog.service';
+import { NodeFsService } from './providers/node-fs.service';
+import { NodeChildProcessService } from './providers/node-child-process.service';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -47,6 +49,8 @@ export function HttpLoaderFactory(http: HttpClient) {
   providers: [
     ElectronService,
     ElectronDialogService,
+    NodeFsService,
+    NodeChildProcessService,
   ],
   bootstrap: [AppComponent]
 })
